@@ -1,6 +1,13 @@
 import React, { Component } from 'react'
 
 class Square extends Component{
+  constructor(props) {
+    super(props)
+    this.state= {
+      pointerEvents: "auto"
+    }
+  }
+
   render(){
     let { index, square, pointerEvents } = this.props
     return(
