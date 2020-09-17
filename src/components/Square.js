@@ -1,18 +1,12 @@
 import React, { Component } from 'react'
 
 class Square extends Component{
-  constructor(props) {
-    super(props)
-    this.state= {
-      pointerEvents: "auto"
-    }
-  }
 
   render(){
-    let { index, square, pointerEvents } = this.props
+    let { index, square } = this.props
     return(
       <React.Fragment>
-        <div id="square" onClick={() => this.props.handleChange(index)} style={{pointerEvents: pointerEvents}}> 
+        <div id="square" onClick={() => this.props.handleChange(index)}> 
         { square }
         </div>
       </React.Fragment>
