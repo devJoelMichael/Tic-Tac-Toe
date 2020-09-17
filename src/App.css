@@ -1,5 +1,23 @@
+body {
+  margin: 1em;
+  text-align: center;
+}
+
 #square{
+  display: flex;
   height: 100px;
   width: 100px;
+  align-items: center;
+  justify-content: center;
   border: 2px solid black;
+  font-size: 90px;
+}
+
+#gameBoard {
+  display: flex;
+  flex-wrap: wrap;
+  height: 312px;
+  width: 312px;
+  border: 5px solid black;
+  margin: 0 auto;
 }
