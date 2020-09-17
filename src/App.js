@@ -7,19 +7,22 @@ class App extends Component{
     super(props)
     this.state = {
       squaresArray: [...Array(9).fill("")],
-      playerTurn: ""
+      playerTurn: "",
+      pointerEvents: "auto",
     }
   }
 
   handleChange = (index) => {
-    let { squaresArray } = this.state
-    playerTurn
-    squaresArray[index] = "X"
-    this.setState({ squaresArray: squaresArray })
+    let { squaresArray, playerTurn, pointerEvents } = this.state
+    if (playerTurn === "player 2") {
+    squaresArray[index] = "O"
+    this.setState({ squaresArray: squaresArray, playerTurn: "player 1", pointerEvents: "none" })} else
+    {squaresArray[index] = "X"
+    this.setState({ squaresArray: squaresArray, playerTurn: "player 2", pointerEvents: "none" })}
   }
 
   render(){
-    let { squaresArray } = this.state
+    let { squaresArray, pointerEvents } = this.state
     let squares = squaresArray.map((square, index) => {
       return (
         <>
@@ -29,6 +32,7 @@ class App extends Component{
         square = { square }
         index = { index }
         key = { index }
+        pointerEvents = { pointerEvents }
 
         />
         </>
