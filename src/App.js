@@ -6,8 +6,16 @@ class App extends Component{
   constructor(props){
     super(props)
     this.state = {
-      squaresArray: [...Array(9).fill("")]
+      squaresArray: [...Array(9).fill("")],
+      playerTurn: ""
     }
+  }
+
+  handleChange = (index) => {
+    let { squaresArray } = this.state
+    playerTurn
+    squaresArray[index] = "X"
+    this.setState({ squaresArray: squaresArray })
   }
 
   render(){
@@ -16,7 +24,9 @@ class App extends Component{
       return (
         <>
         <Square 
-
+        
+        handleChange = { this.handleChange }
+        square = { square }
         index = { index }
         key = { index }
 
